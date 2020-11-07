@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<migration xmlns="http://ebean-orm.github.io/xml/ns/dbmigration">
+    <changeSet type="apply">
+        <createTable name="dincantation" pkName="pk_dincantation">
+            <column name="id" type="integer" primaryKey="true"/>
+            <column name="name" type="varchar" unique="uq_dincantation_name"/>
+        </createTable>
+        <createTable name="dspell" pkName="pk_dspell">
+            <column name="id" type="integer" primaryKey="true"/>
+            <column name="name" type="varchar" unique="uq_dspell_name"/>
+        </createTable>
+        <createTable name="dspell_dincantation" pkName="pk_dspell_dincantation">
+            <column name="dspell_id" type="integer" notnull="true" primaryKey="true"/>
+            <column name="dincantation_id" type="integer" notnull="true" primaryKey="true"/>
+            <foreignKey name="fk_dspell_dincantation_dspell" columnNames="dspell_id" refColumnNames="id" refTableName="dspell" indexName="ix_dspell_dincantation_dspell"/>
+            <foreignKey name="fk_dspell_dincantation_dincantation" columnNames="dincantation_id" refColumnNames="id" refTableName="dincantation" indexName="ix_dspell_dincantation_dincantation"/>
+        </createTable>
+    </changeSet>
+</migration>
