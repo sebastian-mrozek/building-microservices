@@ -1,9 +1,7 @@
 package seb.xmpl.micro.spellbook.db;
 
 import io.ebean.Model;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,6 +10,8 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class DSpell extends Model {
 
     @Id
