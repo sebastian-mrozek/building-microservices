@@ -2,16 +2,15 @@ package seb.xmpl.micro.spellbook.db;
 
 import io.ebean.Model;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Builder
+@Entity
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@Accessors(chain = true)
 public class DSpell extends Model {
 
     @Id

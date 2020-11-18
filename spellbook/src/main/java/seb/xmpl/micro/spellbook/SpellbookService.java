@@ -21,7 +21,7 @@ public class SpellbookService implements ISpellbookService {
     }
 
     private DSpell mapSpell(Spell spell) {
-        return DSpell.builder().name(spell.getName()).build();
+        return new DSpell().setName(spell.getName());
     }
 
     @Override

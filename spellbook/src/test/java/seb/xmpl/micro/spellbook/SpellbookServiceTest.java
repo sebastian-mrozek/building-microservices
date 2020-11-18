@@ -35,9 +35,8 @@ public class SpellbookServiceTest {
     private DSpell generateSpell(String spellName, String incantationName) {
         DIncantation incantation = new DIncantation();
         incantation.setName(incantationName);
-        return DSpell.builder()
-                .name(spellName)
-                .incantations(Collections.singletonList(incantation))
-                .build();
+        return new DSpell()
+                .setName(spellName)
+                .setIncantations(Collections.singletonList(incantation));
     }
 }
