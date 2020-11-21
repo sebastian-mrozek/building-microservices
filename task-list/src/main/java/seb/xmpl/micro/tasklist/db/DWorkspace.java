@@ -1,4 +1,4 @@
-package seb.xmpl.micro.todo.db;
+package seb.xmpl.micro.tasklist.db;
 
 import io.ebean.Model;
 import lombok.Data;
@@ -13,11 +13,11 @@ import java.util.UUID;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class DTaskList extends Model {
+public class DWorkspace extends Model {
     @Id
     private final UUID id;
     private final String name;
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "listId")
-    private final List<DTask> tasks;
+    @JoinColumn(name = "workspaceId")
+    private final List<DTaskList> lists;
 }

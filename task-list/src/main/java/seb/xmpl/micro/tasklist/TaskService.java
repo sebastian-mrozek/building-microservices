@@ -1,12 +1,12 @@
-package seb.xmpl.micro.todo;
+package seb.xmpl.micro.tasklist;
 
 import org.mapstruct.factory.Mappers;
-import seb.xmpl.micro.todo.api.ITaskService;
-import seb.xmpl.micro.todo.api.Task;
-import seb.xmpl.micro.todo.api.TaskList;
-import seb.xmpl.micro.todo.api.Workspace;
-import seb.xmpl.micro.todo.db.DWorkspace;
-import seb.xmpl.micro.todo.mappers.TaskMappers;
+import seb.xmpl.micro.tasklist.api.ITaskService;
+import seb.xmpl.micro.tasklist.api.Task;
+import seb.xmpl.micro.tasklist.api.TaskList;
+import seb.xmpl.micro.tasklist.api.Workspace;
+import seb.xmpl.micro.tasklist.db.DWorkspace;
+import seb.xmpl.micro.tasklist.mappers.TaskMappers;
 
 import java.util.Collections;
 import java.util.UUID;

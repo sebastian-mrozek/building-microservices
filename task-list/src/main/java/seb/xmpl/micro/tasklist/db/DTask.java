@@ -1,23 +1,23 @@
-package seb.xmpl.micro.todo.db;
+package seb.xmpl.micro.tasklist.db;
 
 import io.ebean.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import seb.xmpl.micro.tasklist.api.TaskStatus;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class DWorkspace extends Model {
+public class DTask extends Model {
     @Id
     private final UUID id;
     private final String name;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "workspaceId")
-    private final List<DTaskList> lists;
+    private final TaskStatus status;
+    private final String description;
 }

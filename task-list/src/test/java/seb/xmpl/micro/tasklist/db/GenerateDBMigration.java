@@ -1,4 +1,4 @@
-package seb.xmpl.micro.todo.db;
+package seb.xmpl.micro.tasklist.db;
 
 import io.ebean.annotation.Platform;
 import io.ebean.dbmigration.DbMigration;

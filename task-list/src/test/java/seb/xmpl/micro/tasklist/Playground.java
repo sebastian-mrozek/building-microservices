@@ -1,8 +1,8 @@
-package seb.xmpl.micro.todo;
+package seb.xmpl.micro.tasklist;
 
 import org.junit.jupiter.api.Test;
-import seb.xmpl.micro.todo.db.DWorkspace;
-import seb.xmpl.micro.todo.db.query.QDWorkspace;
+import seb.xmpl.micro.tasklist.db.DWorkspace;
+import seb.xmpl.micro.tasklist.db.query.QDWorkspace;
 
 import java.util.List;
 

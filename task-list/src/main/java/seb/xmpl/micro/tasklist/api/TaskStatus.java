@@ -1,4 +1,4 @@
-package seb.xmpl.micro.todo.api;
+package seb.xmpl.micro.tasklist.api;
 
 public enum TaskStatus {
     OPEN,
