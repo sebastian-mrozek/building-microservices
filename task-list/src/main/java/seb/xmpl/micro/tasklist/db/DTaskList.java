@@ -15,9 +15,9 @@ import java.util.UUID;
 @Accessors(chain = true)
 public class DTaskList extends Model {
     @Id
-    private final UUID id;
-    private final String name;
+    private UUID id;
+    private String name;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "listId")
-    private final List<DTask> tasks;
+    private List<DTask> tasks;
 }

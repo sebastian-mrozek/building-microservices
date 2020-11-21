@@ -16,8 +16,8 @@ import java.util.UUID;
 @Accessors(chain = true)
 public class DTask extends Model {
     @Id
-    private final UUID id;
-    private final String name;
-    private final TaskStatus status;
-    private final String description;
+    private UUID id;
+    private String name;
+    private TaskStatus status;
+    private String description;
 }

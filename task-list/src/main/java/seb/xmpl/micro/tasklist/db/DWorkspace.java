@@ -15,9 +15,9 @@ import java.util.UUID;
 @Accessors(chain = true)
 public class DWorkspace extends Model {
     @Id
-    private final UUID id;
-    private final String name;
+    private UUID id;
+    private String name;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "workspaceId")
-    private final List<DTaskList> lists;
+    private List<DTaskList> lists;
 }

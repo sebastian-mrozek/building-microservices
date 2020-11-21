@@ -12,9 +12,14 @@ import seb.xmpl.micro.tasklist.db.DWorkspace;
 public interface TaskMappers {
 
     DWorkspace fromApi(Workspace workspace);
+
     Workspace toApi(DWorkspace dWorkspace);
+
     DTaskList fromApi(TaskList list);
+
     TaskList toApi(DTaskList dList);
+
     DTask fromApi(Task task);
+
     Task toApi(DTask dTask);
 }
