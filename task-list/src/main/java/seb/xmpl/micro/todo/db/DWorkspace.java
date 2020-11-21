@@ -1,0 +1,23 @@
+package seb.xmpl.micro.todo.db;
+
+import io.ebean.Model;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+
+import javax.persistence.*;
+import java.util.List;
+import java.util.UUID;
+
+@Entity
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class DWorkspace extends Model {
+    @Id
+    private final UUID id;
+    private final String name;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "workspaceId")
+    private final List<DTaskList> lists;
+}

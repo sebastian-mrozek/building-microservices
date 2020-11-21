@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<migration xmlns="http://ebean-orm.github.io/xml/ns/dbmigration">
+    <changeSet type="apply">
+        <createTable name="dtask" identityType="external" pkName="pk_dtask">
+            <column name="id" type="uuid" primaryKey="true" identity="true"/>
+            <column name="listId" type="uuid" notnull="true" references="dtask_list.id" foreignKeyName="fk_dtask_listid" foreignKeyIndex="ix_dtask_listid"/>
+            <column name="name" type="varchar"/>
+            <column name="status" type="integer" checkConstraint="check ( status in (0,1,2,3,4))" checkConstraintName="ck_dtask_status"/>
+            <column name="description" type="varchar"/>
+        </createTable>
+        <createTable name="dtask_list" identityType="external" pkName="pk_dtask_list">
+            <column name="id" type="uuid" primaryKey="true" identity="true"/>
+            <column name="workspaceId" type="uuid" notnull="true" references="dworkspace.id" foreignKeyName="fk_dtask_list_workspaceid" foreignKeyIndex="ix_dtask_list_workspaceid"/>
+            <column name="name" type="varchar"/>
+        </createTable>
+        <createTable name="dworkspace" identityType="external" pkName="pk_dworkspace">
+            <column name="id" type="uuid" primaryKey="true" identity="true"/>
+            <column name="name" type="varchar"/>
+        </createTable>
+    </changeSet>
+</migration>
