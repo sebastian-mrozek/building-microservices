@@ -15,7 +15,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javalin.version>3.12.0</javalin.version>
-        <avaje.inject.version>4.0</avaje.inject.version>
+        <avaje.inject.version>3.0</avaje.inject.version>
         <avaje.http.version>1.0</avaje.http.version>
         <jackson.version>2.11.3</jackson.version>
     </properties>
@@ -25,8 +25,8 @@
         <dependency>
             <groupId>io.avaje</groupId>
             <artifactId>avaje-inject-generator</artifactId>
-            <version>4.0</version>
-            <scope>${avaje.inject.version}</scope>
+            <version>${avaje.inject.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.avaje</groupId>
