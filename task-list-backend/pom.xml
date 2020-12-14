@@ -15,8 +15,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <javalin.version>3.12.0</javalin.version>
-        <avaje.inject.version>3.0</avaje.inject.version>
-        <avaje.http.version>1.0</avaje.http.version>
+        <avaje.inject.version>4.1</avaje.inject.version>
+        <avaje.http.version>1.2</avaje.http.version>
         <jackson.version>2.11.3</jackson.version>
     </properties>
 
